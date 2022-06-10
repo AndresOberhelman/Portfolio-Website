@@ -1,0 +1,130 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    min-height: 100%;
+    align-items: center;
+  }
+ 
+
+  .header h1{
+      text-align: center;
+      font-size:100px;
+      background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header{
+      color:white;
+      height: 300px;
+      padding: 10px;
+      margin:auto;
+  }
+
+  .middle{
+      height:;
+      display: flex;
+      padding: 20px;
+      width: 1000px;
+      margin: auto;
+      margin-right: 150px;
+      margin-left: 100px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 50px;
+  }
+.skills{
+    background: linear-gradient(270deg, #007af1, #f23010);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 75px;
+}
+.middle h1{
+    margin: auto;
+    color: white;
+    font-size: 50px;;
+} 
+
+.projects p{
+    color: white;
+}
+  ul{
+      display: flex;
+      list-style-type: none;
+    
+      }
+
+    ul li{
+        margin: 10px;
+        padding: 10px;
+    }
+  .header p{
+      width: 100px;
+      height: 100px;
+      text-align: center;
+  }
+  #footer{
+      width: 100%;
+      margin-bottom: 0px;
+      text-align: center;
+      position: absolute;
+      height:60px;
+      bottom: 0;
+      margin: 0;
+      background-color: gray;
+      padding: 10px;
+  }
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid red;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
+  img{
+    width:78px;
+    height:110px;
+  }

@@ -5,13 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
 </head>
-<h1>Andres Oberhelman Portfolio Website</h1>
-<p>Hello my name is Andres Oberhelman and I am a software engineer attending
+<body>  
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+<div class="header">
+<h1>Andres Oberhelman's Website</h1>
+<!-- <p>Hello my name is Andres Oberhelman and I am a software engineer attending 
     Louisiana State University. This is a website the displays my different projects that
-    correspond with web development.
-</p>
-<body>
+    correspond with web development. These can be either big or small projects as this will be updated as I add more.
+</p>  
+-->
+</div>
+
+<div class="middle">
+
+<div class="skills">
+<h1>Skills</h1>
+<ul>
+    <li><img id="react"src=".\images\react.svg"></li>
+    <li><img id="javascript"src=".\images\javascript.svg"/></li>
+    <li><img id="html"src=".\images\html.svg"/></li>
+    <li><img id="css" src=".\images\css3.svg"/></li>
+    <li><img id="java"src=".\images\java.svg"/></li>
+    <li><img id="c++"src=".\images\c.svg"/></li>
+    <li><img id="python"src=".\images\python.svg"/></li>
+    <li><img id="mern"src=".\images\mern-stack.svg"/></li>
+</ul>
+</div>
+<div class="projects">
+<h1>Projects</h1>
+<p>You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. You know, it really doesn’t matter what you write as long as you’ve got a young, and beautiful, piece of text. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen.
+
+    Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot. The other thing with Lorem Ipsum is that you have to take out its family. I think the only difference between me and the other placeholder text is that I’m more honest and my words are more beautiful.
     
+    Lorem Ispum is a choke artist. It chokes! An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.
+    
+    Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. My text is long and beautiful, as, it has been well documented, are various other parts of my website. Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right? My text is long and beautiful, as, it has been well documented, are various other parts of my website. Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right?
+    
+    Does everybody know that pig named Lorem Ipsum? She's a disgusting pig, right? It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again. My placeholder text, I think, is going to end up being very good with women.</p>
+</div>
+</div>
+
+
 </body>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+          
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>
