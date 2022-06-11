@@ -48,10 +48,12 @@ body {
 .menu-container-wrapper{
     display: flex;
     border-style:ridge;
+    flex-direction: row;
     justify-content: center;
-    gap:500px;
     width: 100%;
     background: linear-gradient(270deg, #007af1, #f23010);
+    padding: 10px;
+    gap: 20%;
 
 }
 
@@ -61,11 +63,15 @@ body {
     color:white;
 
 }
+
+.menu-container-wrapper a:hover{
+  text-shadow: 0 0 5px yellow;
+}
   .middle{
       height:auto;
       display: flex;
       padding: 20px;
-      width: 1000px;
+      width: 100%;
       margin: auto;
       margin-right: 150px;
       margin-left: 100px;
@@ -81,6 +87,8 @@ body {
     flex-direction: column;
     padding: 75px;
     margin-bottom: 50px;
+    width:40%;
+    align-items: center;
 }
 .middle h1{
     margin: auto;
@@ -96,16 +104,19 @@ body {
 .projects p{
     color: white;
 }
-  ul{
-      display: flex;
-      list-style-type: none;
-    
-      }
 
-    ul li{
-        margin: 10px;
-        padding: 10px;
-    }
+ul{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+  ul li{
+      margin: 10px;
+      padding: 10px;
+  }
   
 
   
@@ -132,8 +143,9 @@ body {
     vertical-align: top;
     display: inline-block;
     width: 100%;
+    height: 100%;
     background-color: #fff;
-    animation: loader-inner 2s infinite ease-in;
+    animation: loader-inner 10s infinite ease-in;
   }
   
   @keyframes loader {
@@ -166,10 +178,86 @@ body {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-  
-
   }
 
   footer a{
     color: white;
+  }
+
+  .wrapper{
+    background: linear-gradient(270deg, #007af1, #f23010);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 75px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+  }
+ 
+  .skill-level{
+    padding: 20px;
+    color: white;
+  }
+.skill-bar{
+  height: 14px;
+  background:rgb(66, 64, 64);
+  border-radius: 30px;
+  
+}
+  .skill-per{
+    height: 14px;
+    background: yellow;
+    position: relative;
+    animation: fillBars 3s 1;
+    border-radius: 30px;
+
+  }
+
+  .levels{
+    width: 50%;
+    padding: 0 20px;
+    background: linear-gradient(270deg, #007af1, #f23010);
+    border-radius: 30px;
+  }
+
+  .skill-name{
+    padding: 10px;
+    padding-left: 0px;
+  }
+
+  .skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 20px;
+    top: -60px;
+    right:0;
+    transform: translateX(50%);
+    color: white;
+    border-style:double;
+    border-color:  blue;
+  }
+
+  .skill-per::after{
+    content:"";
+    position: absolute;
+    width:10px;
+    height:10px;
+    background-color: white;
+    top: -20px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
+  }
+
+  @keyframes fillBars{
+    from{
+      width:0;
+    }
+    to{
+      width:100%;
+    }
   }
