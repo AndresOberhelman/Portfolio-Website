@@ -39,6 +39,14 @@ body {
       text-align: center;
       align-items: center;
   }
+
+  .header h2{
+    color: black;
+  }
+
+  .header p{
+    color: black;
+  }
 .header h3{
     color: lightblue;
 }
