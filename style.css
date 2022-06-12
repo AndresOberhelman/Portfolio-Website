@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: black;
+    background-color: white;
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
@@ -42,31 +42,7 @@ body {
 .header h3{
     color: lightblue;
 }
-.menu-container .info{
-   font-size: 40px;
-}
-.menu-container-wrapper{
-    display: flex;
-    border-style:ridge;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background: linear-gradient(270deg, #007af1, #f23010);
-    padding: 10px;
-    gap: 20%;
 
-}
-
-.menu-container-wrapper a{
-    text-decoration: none;
-    font-size: 30px;
-    color:white;
-
-}
-
-.menu-container-wrapper a:hover{
-  text-shadow: 0 0 5px yellow;
-}
   .middle{
       height:auto;
       display: flex;
@@ -81,7 +57,7 @@ body {
       border-radius: 50px;
         }
 .skills{
-    background: linear-gradient(270deg, #007af1, #f23010);
+    background: rgb(51, 102, 153);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -136,7 +112,7 @@ ul{
     width: 30px;
     height: 30px;
     position: relative;
-    border: 4px solid red;
+    border: 4px solid blue;
     animation: loader 2s infinite ease;
   }
   .loader-inner {
@@ -172,7 +148,7 @@ ul{
   footer{
     height: 70px;
     display: flex;
-    background:  linear-gradient(270deg, #007af1, #f23010);
+    background:  rgb(51, 102, 153);
     width:100%;
     margin-bottom: 0%;
     text-align: center;
@@ -185,7 +161,7 @@ ul{
   }
 
   .wrapper{
-    background: linear-gradient(270deg, #007af1, #f23010);
+    background: rgb(51, 102, 153);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -207,7 +183,7 @@ ul{
 }
   .skill-per{
     height: 14px;
-    background: yellow;
+    background: rgb(3, 247, 3);
     position: relative;
     animation: fillBars 3s 1;
     border-radius: 30px;
@@ -217,7 +193,7 @@ ul{
   .levels{
     width: 50%;
     padding: 0 20px;
-    background: linear-gradient(270deg, #007af1, #f23010);
+    background: rgb(51, 102, 153);
     border-radius: 30px;
   }
 
@@ -260,4 +236,76 @@ ul{
     to{
       width:100%;
     }
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
   }
