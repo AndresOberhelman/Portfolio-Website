@@ -206,15 +206,14 @@ ul{
     content: attr(per);
     position: absolute;
     padding: 4px 6px;
-    background-color: black;
+    background-color: white;
     border-radius: 4px;
     font-size: 20px;
     top: -60px;
     right:0;
     transform: translateX(50%);
-    color: white;
-    border-style:double;
-    border-color:  blue;
+    color: black;
+    
   }
 
   .skill-per::after{
